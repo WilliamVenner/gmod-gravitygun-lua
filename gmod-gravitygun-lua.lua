@@ -10,12 +10,12 @@ GravGunPickups = GravGunPickups or {
 
 do
 	local plyMeta = FindMetaTable("Player")
-	function plyMeta:GetUseEntity()
+	function plyMeta:GetGravGunEntity()
 		return GravGunPickups.Players[self] or NULL
 	end
 
 	local entMeta = FindMetaTable("Entity")
-	function entMeta:GetOwnerEntity()
+	function entMeta:GetGravGunPlayer()
 		return GravGunPickups.Entities[self] or NULL
 	end
 end
